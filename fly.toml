@@ -1,28 +1,28 @@
-# fly.toml app configuration file generated for full-stack-open-pokedex-bold-grass-1016 on 2025-07-03T22:05:29+03:00
+# fly.toml app configuration file generated for full-stack-open-pokedex-old-water-4128 on 2025-07-04T10:46:23+03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'full-stack-open-pokedex-bold-grass-1016'
+app = 'full-stack-open-pokedex-old-water-4128'
 primary_region = 'arn'
-
-[env]
-PORT = "3000"
-
-[processes]
-app = "node app.js"
 
 [build]
 
+[env]
+  PORT = '3000'
+
+[processes]
+  app = 'node app.js'
+
 [http_service]
-internal_port = 3000
-force_https = true
-auto_stop_machines = 'stop'
-auto_start_machines = true
-min_machines_running = 0
-processes = ['app']
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
 
 [[vm]]
-memory = '1gb'
-cpu_kind = 'shared'
-cpus = 1
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
